@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Idade Atualizada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Idade Atualizada</h1>
+    <p id="age"></p>
+
+    <script>
+        function calculateAge(birthDate) {
+            var now = new Date();
+            var age = now.getFullYear() - birthDate.getFullYear();
+            var monthDiff = now.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        var birthDate = new Date("03/27/2000");
+        var ageElement = document.getElementById("age");
+
+        function updateAge() {
+            var age = calculateAge(birthDate);
+            ageElement.textContent = "Sua idade atual é: " + age + " anos";
+        }
+
+        updateAge();
+        setInterval(updateAge, 1000); // Atualiza a idade a cada segundo
+    </script>
+</body>
+</html>
