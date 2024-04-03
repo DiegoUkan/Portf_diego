@@ -96,43 +96,23 @@
                     <section style=" height: auto; width: 100%; display: block;" class="jumbotron text-left">
                         <div style="margin-top: -5%;" class="container">
                             <h1 style="text-align:center " class="jumbotron-heading">Contato</h1>
-                            <form action="" method="POST">
-                                {{ form.csrf_token }}
+                            <form id="contactForm" role="form" method="post" action="https://formsubmit.co/ajax/diego_neves_ukan2010@Hotmail.com">
                                 <div class="form-group">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p>Nome:</p>
-                                                <p>{{form.nome(class="form-control", placeholder="Seu Nome")}}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Empresa:</p>
-                                                <p>{{form.empresa(class="form-control", placeholder="Nome de sua empresa")}}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Cidade:</p>
-                                                <p>{{form.cidade(class="form-control", placeholder="Cidade de sua empresa")}}</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Cargo:</p>
-                                                <p>{{form.cargo(class="form-control", placeholder="Cargo ofertado")}}</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Descrição Cargo:</p>
-                                                <p>{{form.desc_cargo(class="form-control", placeholder="Descrição do cargo")}}</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Email para contato:</p>
-                                                <p>{{form.email_contato(class="form-control", placeholder="Email para contato")}}</p>
-                                            </div>
-                                        </div>
-                                        <div style="text-align: center; margin-top: 0%;">
-                                            <button style="margin-top: 10% ;width: 80%; height: 100%; color:'{{color}}';" type="submit"
-                                                class="btn btn-default btn-outline-secondary">{{info}}</button>
-                                        </div>
-                                    </div>
+                                    <label class="sr-only" for="name">Nome</label>
+                                    <input class="form-control" type="text" id="name" name="name" placeholder="Seu nome*" required="required" data-validation-required-message="Por favor, insira seu Nome"/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="email">E-mail</label>
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="Seu e-mail*" required="required" data-validation-required-message="Por favor, insira seu E-mail"/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Insira sua mensagem" required="required" data-validation-required-message="Por favor, insira uma mensagem"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Submit</button>
                                 </div>
                             </form>
 
