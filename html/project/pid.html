@@ -45,7 +45,7 @@
 </head>
 <body>
     <nav class="nav navbar fixed-top bg-dark">
-        <a style="color: white;" class="navbar-brand" text="c">Projeto de controle angular utilizando PID</a>
+        <a style="color: white;" class="navbar-brand" text="c">Diego Ukan - Projetos</a>
         <div class="navbar">
             <div class="row"></div>
                 <li class="nav-item">
@@ -60,123 +60,48 @@
         </div>
     </nav>
 
- 
-
-    
+    <!--imagem e texto titulo -->
     <section class="content jumbotron text-center" id="home">
-        <div class="container" style="margin-top: 10mm;">
-            <h1 class="jumbotron-heading">Diego Rodrigo Neves Ukan</h1>
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <img class="foto-perfil"
-                        src="https://i.imgur.com/XLhQcbE.jpg"
-                        alt="">
-                </div>
-                <div class="col-md-9 ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-center">
-                                <p class="lead text-muted" id="sem"></p>
-                                <script>
-                                    function calculateSem(birthDate) {
-                                        var sem = 0;
-                                        var monthDiff = 0;
-                                        var now = new Date();
-                                        sem = now.getFullYear() - birthDate.getFullYear();
-                                        monthDiff = now.getMonth() - birthDate.getMonth();
-                                        sem = sem*12+monthDiff+1;
-                                        sem = Math.ceil(sem/6);
-                                        return sem;
-                                    }
-                            
-                                    var birthDate = new Date("01/01/2020");
-                                    var semElement = document.getElementById("sem");
-                            
-                                    function updateSem() {
-                                        var sem = calculateSem(birthDate);
-                                        semElement.textContent = "Estudante Eng. Mecatrônica (" + sem + "/10)";
-                                    }
-                            
-                                    updateSem();
-                                    //setInterval(updateSem, 1000); // Atualiza a idade a cada segundo
-                                </script>
-                                <p class="lead text-muted">Curitiba</p>
-                                <p class="lead text-muted" id="age"></p>
-                                <script>
-                                    function calculateAge(birthDate) {
-                                        
-                                        var now = new Date();
-                                        var age = now.getFullYear() - birthDate.getFullYear();
-                                        var monthDiff = now.getMonth() - birthDate.getMonth();
-                                        if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birthDate.getDate())) {
-                                            age--;
-                                        }
-                                        return age;
-                                    }
-                            
-                                    var birthDate = new Date("03/27/2000");
-                                    var ageElement = document.getElementById("age");
-                            
-                                    function updateAge() {
-                                        var age = calculateAge(birthDate);
-                                        ageElement.textContent = age + " Anos";
-                                    }
-                            
-                                    updateAge();
-                                    //setInterval(updateAge, 8000); // Atualiza a idade a cada segundo
-                                </script>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-center">
-                                <p><a class="lead text-muted" href="tel:41995770052">(041) 995770052</a></p>
-                                <p ><a style="font-size: 12pt; object-position: center;" class="lead text-muted"
-                                        href="mailto:diego_neves_ukan2010@Hotmail.com">diego_neves_ukan2010@Hotmail.com</a>
-                                </p>
-                                <p><a class="lead text-muted"
-                                        href="http://www.linkedin.com/in/diego-ukan-124475214">Linkedin</a></p>
-                            </div>
-                            
-                        </div>
-                        
-                        <a style="margin-top: 0% ;width: 100%; height: 80%;" href="https://wa.me/5541995770052"><button  
-                            
-                                                class="btn btn-default btn-outline-secondary">Entrar em Contato</button>
-                        </a>
-                        
-                    </div>
-                </div>
+        <div class="container" style="position: relative; margin-top: 10mm;">
+            <img src="Images/pid/2.png" alt="Perfil de Diego Rodrigo Neves Ukan" style="width: 100%; height: auto; border-radius: 10px;">
+            
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                <h1>Projeto de controle angular utilizando PID</h1>
             </div>
         </div>
     </section>
     <div class="content album py-0 bg-white">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <section style=" height: 390px; width: 100%; display: block;" class="jumbotron text-left">
+                <div class="col-md-12">
+                    <section style=" height: 200px; width: 100%; display: block;" class="jumbotron text-left">
                         <div style="margin-top: -5%;" class="container">
-                            <h1 style="text-align:center " class="jumbotron-heading">Perfil</h1>
-                            <p class="lead text-muted">Conhecimento em automação utilizando
-                                microcontroladores, com habilidade em
-                                tratamento de dados e uso de diversos tipos de
-                                hardware sensorial. Criativo e curioso, tenho como
-                                hobby projetar sistemas.</p>
+                            <h1 style="text-align:center " class="jumbotron-heading">Sobre</h1>
+                            <p class="lead text-muted">O projeto foi desenvolvido para avaliação da matéria de controle digital
+                                                        ministrada pelo professor Nicolas Dalmedico. O trabalho aborda o conceito de PID
+                                                        aplicado a um motor DC com um encoder rotativo em seu eixo, assim criando um sistema
+                                                         de malha fechada junto ao microcontrolador.
+                            </p>
                         </div>
                     </section>
                 </div>
-                <div class="col-md-6">
-                    <section style="height: 390px; width: 100%; display: block;" class="jumbotron text-left">
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section style="height: 320px; width: 100%; display: block;" class="jumbotron text-left">
                         <div style="margin-top: -5%;" class="container">
-                            <h1 style="text-align:center" class="jumbotron-heading">Habilidades</h1>
+                            <h1 style="text-align:center" class="jumbotron-heading">Materiais</h1>
                             <p class="lead text-muted">
-                                <li class="lead text-muted">C (Avançado)</li>
-                                <li class="lead text-muted">C++ (Avançado)</li>
-                                <li class="lead text-muted">Python (intermediário)</li>
-                                <li class="lead text-muted">Visual Basic (intermediário)</li>
-                                <li class="lead text-muted">HTML/CSS (básico)</li>
-                                <li class="lead text-muted">Script (básico)</li>
-                                <li class="lead text-muted">SQL (básico)</li>
-                                <li class="lead text-muted">Sistema SAP (script)</li>
+                                <li class="lead text-muted">1x Microcontrolador ESP32</li>
+                                <li class="lead text-muted">1x BTS7960</li>
+                                <li class="lead text-muted">3x potenciometros</li>
+                                <li class="lead text-muted">1x Encoder incremental (para controle)</li>
+                                <li class="lead text-muted">1x Motor com encoder</li>
+                                <li class="lead text-muted">1x display OLED SH1105</li>
+                                <li class="lead text-muted">Fios, estranho e placa perfurada</li>
                             </p>
                         </div>
                     </section>
@@ -322,34 +247,25 @@
     <div class="album py-1 bg-white">
 
         <div class="container">
-            <h1>Carreira</h1>
+            <h1>Materiais</h1>
             <div class="row">
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
+                <div class="col-md-3 py-2">
+                    <div class="card mb-3 box-shadow">
                         <div class="card-body">
-                            <h2>Ensino médio</h2>
+                            <h2>ESP32</h2>
                             <div class="row">
-                                <div class="col-md-3 py-1">
+                                <div class="col-md-12 py-1">
                                     <img class="card-img-top" alt="Thumbnail [100%x225]"
                                         style="height: 100%; width: 100%; display: block;"
                                         src="https://i.ibb.co/nRfX3Zj/SID-1790.jpg"
                                         data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Minha trajetória de esforços começou no ensino médio, onde
-                                        prestei concurso e consegui uma bolsa parcial no colégio
-                                        SESI-PR. Foram 3 anos de muito trabalho e crescimento profissional e
-                                        principalmente pessoal. Lá eu aprendi o que é ter responsabilidades e que com
-                                        uma boa equipe
-                                        podemos ir mais longe!
-                                    </p>
                                 </div>
                             </div>
                             <small class="text-muted">Dez/2017</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 py-2">
+                <div class="col-md-3 py-2">
                     <div class="card mb-6 box-shadow">
                         <div class="card-body">
                             <h2>Eletrotécnica</h2>
@@ -360,25 +276,12 @@
                                         src="https://i.ibb.co/nnDwYrf/Whats-App-Image-2021-12-13-at-22-24-47.jpg"
                                         data-holder-rendered="true">
                                 </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Meu curso técnico em Eletrotécnica teve duração de dois anos e
-                                        eu cursava no contraturno do ensino médio. Com ele aprendi conceitos de:
-                                    <p class="lead text-muted">
-                                        <li class="text-muted">Elétrica de potência;</li>
-                                        <li class="text-muted">Indução / interferência;</li>
-                                        <li class="text-muted">Introdução à programação ladder (PLC);</li>
-                                        <li class="text-muted">AutoCAD;</li>
-                                        <li class="text-muted">NR 12;</li>
-                                        <li class="text-muted">Entre outros.</li>
-                                    </p>
-                                    </p>
-                                </div>
                             </div>
                             <small class="text-muted">Dez/2017</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 py-2">
+                <div class="col-md-3 py-2">
                     <div class="card mb-6 box-shadow">
                         <div class="card-body">
                             <h2>Primeiro emprego</h2>
@@ -403,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 py-2">
+                <div class="col-md-3 py-2">
                     <div class="card mb-6 box-shadow">
                         <div class="card-body">
                             <h2>Aux. Controle de Produção</h2>
@@ -435,7 +338,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 py-2">
+                <div class="col-md-3 py-2">
                     <div class="card mb-6 box-shadow">
                         <div class="card-body">
                             <h2>Eng. Mecatrônica</h2>
