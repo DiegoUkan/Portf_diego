@@ -157,11 +157,11 @@
                     <section style=" height: 390px; width: 100%; display: block;" class="jumbotron text-left">
                         <div style="margin-top: -5%;" class="container">
                             <h1 style="text-align:center " class="jumbotron-heading">Perfil</h1>
-                            <p class="lead text-muted">Conhecimento em automação utilizando
-                                microcontroladores, com habilidade em
-                                tratamento de dados e uso de diversos tipos de
-                                hardware sensorial. Criativo e curioso, tenho como
-                                hobby projetar sistemas.</p>
+                            <p class="lead text-muted">Sou especializado em automação com microcontroladores, 
+                                integrando sensores, atuadores e processamento embarcado. Tenho experiência 
+                                em eletrônica, programação e visão computacional. Criativo e curioso, desenvolvo 
+                                sistemas funcionais que aliam técnica e inovação. No tempo livre, crio protótipos 
+                                e busco soluções práticas para desafios reais, sempre aprimorando minhas habilidades.</p>
                         </div>
                     </section>
                 </div>
@@ -321,194 +321,111 @@
         </div>
     </section>
     <div class="album py-1 bg-white">
+  <div class="container">
+    <h1>Carreira</h1>
+    <div id="career-container" class="row"></div>
+  </div>
+</div>
 
-        <div class="container">
-            <h1>Carreira</h1>
+<script>
+  const careerData = [
+    {
+      titulo: "Ensino médio",
+      imagem: "https://i.ibb.co/nRfX3Zj/SID-1790.jpg",
+      descricao: `Minha trajetória de esforços começou no ensino médio, onde
+        prestei concurso e consegui uma bolsa parcial no colégio
+        SESI-PR. Foram 3 anos de muito trabalho e crescimento profissional e
+        principalmente pessoal. Lá eu aprendi o que é ter responsabilidades e que com
+        uma boa equipe podemos ir mais longe!`,
+      data: "Dez/2017"
+    },
+    {
+      titulo: "Eletrotécnica",
+      imagem: "https://i.ibb.co/nnDwYrf/Whats-App-Image-2021-12-13-at-22-24-47.jpg",
+      descricao: `Meu curso técnico em Eletrotécnica teve duração de dois anos e
+        eu cursava no contraturno do ensino médio. Com ele aprendi conceitos de:
+        <ul class="lead text-muted">
+          <li class="text-muted">Elétrica de potência;</li>
+          <li class="text-muted">Indução / interferência;</li>
+          <li class="text-muted">Introdução à programação ladder (PLC);</li>
+          <li class="text-muted">AutoCAD;</li>
+          <li class="text-muted">NR 12;</li>
+          <li class="text-muted">Entre outros.</li>
+        </ul>`,
+      data: "Dez/2017"
+    },
+    {
+      titulo: "Primeiro emprego",
+      imagem: "https://cdn.pixabay.com/photo/2019/10/18/19/51/financial-4560047_960_720.jpg",
+      descricao: `Minha introdução no mercado de trabalho se deu pouco depois de
+        completar 18 anos, comecei como aprendiz na empresa ROCA | Incepa. Minha carga
+        horária era de apenas 4 horas, o que permitia que eu tivesse muito tempo à
+        tarde, e foi nesse período que pude tirar muitos projetos (já citados) do papel.
+        Minha jornada na empresa estava apenas começando, como um simples contador de
+        estoque.`,
+      data: "Jun/2018"
+    },
+    {
+      titulo: "Aux. Controle de Produção",
+      imagem: "https://cdn.pixabay.com/photo/2015/01/09/11/11/office-594132_960_720.jpg",
+      descricao: `Após o fim do contrato de aprendiz, fui contratado como
+        Auxiliar de Controle de Produção, onde pude me dedicar em tempo integral à
+        empresa, melhorando processos já existentes e realizando novas tarefas. Minhas
+        tarefas eram:
+        <ul class="lead text-muted">
+          <li class="text-muted">Contagem e organização do estoque;</li>
+          <li class="text-muted">Elaboração de procedimento mais confiável para contagem, utilizando excel;</li>
+          <li class="text-muted">Correção de Listas técnicas;</li>
+          <li class="text-muted">Solicitação de serviços de terceiros;</li>
+          <li class="text-muted">Requisição de compras de materiais de escritório;</li>
+          <li class="text-muted">Entre outros.</li>
+        </ul>`,
+      data: "Jul/2019"
+    },
+    {
+      titulo: "Eng. Mecatrônica",
+      imagem: "https://i.ibb.co/HHrymvK/22.png",
+      descricao: `Visto meu interesse na área de automação, decidi iniciar uma
+        graduação que me levasse ao objetivo desejado. Me matriculei com intenção de
+        aprender e me qualificar para o mercado de trabalho com a meta de um dia
+        unificar meu gosto por automação a minha rotina. Conceitos Já abordados:
+        <ul class="lead text-muted">
+          <li class="text-muted">Programação C, C++, Python, ladder e java (superficial);</li>
+          <li class="text-muted">Modelagem 3D - Fusion 3D;</li>
+          <li class="text-muted">Análise e concepção de circuitos;</li>
+          <li class="text-muted">Sistemas microprocessados e interfaces;</li>
+          <li class="text-muted">Protocolo MQTT;</li>
+          <li class="text-muted">PLC (TIA Portal e CODESYS);</li>
+          <li class="text-muted">Cálculo, Cinemática, entre outros.</li>
+        </ul>`,
+      data: "Jan/2020 - Dez/2024"
+    }
+  ];
+
+  const container = document.getElementById("career-container");
+
+  careerData.forEach(item => {
+    container.innerHTML += `
+      <div class="col-md-12 py-2">
+        <div class="card mb-6 box-shadow">
+          <div class="card-body">
+            <h2>${item.titulo}</h2>
             <div class="row">
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Ensino médio</h2>
-                            <div class="row">
-                                <div class="col-md-3 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 100%; width: 100%; display: block;"
-                                        src="https://i.ibb.co/nRfX3Zj/SID-1790.jpg"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Minha trajetória de esforços começou no ensino médio, onde
-                                        prestei concurso e consegui uma bolsa parcial no colégio
-                                        SESI-PR. Foram 3 anos de muito trabalho e crescimento profissional e
-                                        principalmente pessoal. Lá eu aprendi o que é ter responsabilidades e que com
-                                        uma boa equipe
-                                        podemos ir mais longe!
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Dez/2017</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Eletrotécnica</h2>
-                            <div class="row">
-                                <div class="col-md-3 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 100%; width: 100%; display: block;"
-                                        src="https://i.ibb.co/nnDwYrf/Whats-App-Image-2021-12-13-at-22-24-47.jpg"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Meu curso técnico em Eletrotécnica teve duração de dois anos e
-                                        eu cursava no contraturno do ensino médio. Com ele aprendi conceitos de:
-                                    <p class="lead text-muted">
-                                        <li class="text-muted">Elétrica de potência;</li>
-                                        <li class="text-muted">Indução / interferência;</li>
-                                        <li class="text-muted">Introdução à programação ladder (PLC);</li>
-                                        <li class="text-muted">AutoCAD;</li>
-                                        <li class="text-muted">NR 12;</li>
-                                        <li class="text-muted">Entre outros.</li>
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Dez/2017</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Primeiro emprego</h2>
-                            <div class="row">
-                                <div class="col-md-3 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 100%; width: 100%; display: block;"
-                                        src="https://cdn.pixabay.com/photo/2019/10/18/19/51/financial-4560047_960_720.jpg"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Minha introdução no mercado de trabalho se deu pouco depois de
-                                        completar 18 anos, comecei como aprendiz na empresa ROCA | Incepa. Minha carga
-                                        horária era de apenas 4 horas, o que permitia que eu tivesse muito tempo a
-                                        tarde, e foi nesse período que pude tirar muitos projetos (já citados) do papel.
-                                        Minha jornada na empresa estava apenas começando, como um simples contador de
-                                        estoque.
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Jun/2018</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Aux. Controle de Produção</h2>
-                            <div class="row">
-                                <div class="col-md-3 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 92%; width: 100%; display: block;"
-                                        src="https://cdn.pixabay.com/photo/2015/01/09/11/11/office-594132_960_720.jpg"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-9 py-1">
-                                    <p class="card-text">Após o fim do contrato de aprendiz, fui contratado como
-                                        Auxiliar de Controle de Produção, onde pude me dedicar em tempo integral à
-                                        empresa, melhorando processos já existêntes e realizando novas tarefas. Minhas
-                                        tarefas eram:
-                                    <p class="lead text-muted">
-                                        <li class="text-muted">Contagem e organização do estoque;</li>
-                                        <li class="text-muted">Elaboração de procedimento mais confiável para contagem,
-                                            utilizando excel;</li>
-                                        <li class="text-muted">Correção de Listas técnicas;</li>
-                                        <li class="text-muted">Solicitação de serviços de terceiros;</li>
-                                        <li class="text-muted">Requisição de compras de materiais de escritório;</li>
-                                        <li class="text-muted">Entre outros.</li>
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Jul/2019</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Eng. Mecatrônica</h2>
-                            <div class="row">
-                                <div class="col-md-4 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 90%; width: 100%; display: block;"
-                                        src="https://i.ibb.co/HHrymvK/22.png"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-8 py-1">
-                                    <p class="card-text">Visto meu interesse na área de automação, decidi iniciar uma
-                                        graduação que me levasse ao objetivo desejado. Me matriculei com intenção de
-                                        aprender e me qualificar para o mercado de trabalho com a meta de um dia
-                                        unificar meu gosto por automação a minha rotina. Conceitos Já abordados:
-                                    <p class="lead text-muted">
-                                        <li class="text-muted">Programação C, C++, Python, ladder e java (superficial);
-                                        </li>
-                                        <li class="text-muted">Modelagem 3D - Fusion 3D;</li>
-                                        <li class="text-muted">Análise e concepção de circuitos;</li>
-                                        <li class="text-muted">Sistemas microprocessados e interfaces;</li>
-                                        <li class="text-muted">Protocolo MQTT;</li>
-                                        <li class="text-muted">PLC (TIA Portal e CODESYS);</li>
-                                        <li class="text-muted">Cálculo, Cinemática, entre outros.</li>
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Jan/2020 - Dez/2024</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 py-2">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-body">
-                            <h2>Analista de Controle de Produção</h2>
-                            <div class="row">
-                                <div class="col-md-4 py-1">
-                                    <img class="card-img-top" alt="Thumbnail [100%x225]"
-                                        style="height: 90%; width: 90%; display: block; margin-left: 5%;"
-                                        src="https://www.mjcapacitacoes.com.br/wp-content/uploads/2018/06/pcp-icon.png"
-                                        data-holder-rendered="true">
-                                </div>
-                                <div class="col-md-8 py-1">
-                                    <p class="card-text">E como de inesperado, fui promovido em setembro de 2020 à vaga
-                                        de Analista de Controle de Produção, trabalhando ainda com o estoque, porém com
-                                        a solicitação e manutenção dos mesmos no sistema da empresa. Minhas tarefas são:
-                                    <p class="lead text-muted">
-                                        <li class="text-muted">Solicitação de embalagens, pallets e insumos em geral;
-                                        </li>
-                                        <li class="text-muted">Follow-UP de entrega;</li>
-                                        <li class="text-muted">Controle e manutenção dos depósitos de minha
-                                            responsabilidade;</li>
-                                        <li class="text-muted">Apropriação de custos e perdas em ordens de produção;
-                                        </li>
-                                        <li class="text-muted">Ajustes de inventário;</li>
-                                        <li class="text-muted">Solicitação de processamento de alguns insumos por
-                                            empresas terceirizadas;</li>
-                                        <li class="text-muted">Elaboração e apresentação de produção mensal utilizando
-                                            Power BI;</li>
-                                        <a href="/index2.html"><li class="text-muted">Entre outros.</li></a>
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="text-muted">Set/2020 - Atual</small>
-                        </div>
-                    </div>
-                </div>
+              <div class="col-md-3 py-1">
+                <img class="card-img-top" alt="Thumbnail" style="height: 100%; width: 100%; display: block;" src="${item.imagem}">
+              </div>
+              <div class="col-md-9 py-1">
+                <p class="card-text">${item.descricao}</p>
+              </div>
             </div>
+            <small class="text-muted">${item.data}</small>
+          </div>
         </div>
-    </div>
+      </div>
+    `;
+  });
+</script>
+
 </body>
 
 </html>
